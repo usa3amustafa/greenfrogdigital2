@@ -48,7 +48,7 @@ section {
 }
 
 .title-0x75 {
-  font-size: 1rem;
+  font-size: 0.75rem;
 }
 .title-1 {
   font-size: 1rem;
@@ -118,6 +118,9 @@ section {
 }
 .black-bg-container {
   background-color: #111111;
+}
+.grey-bg-container {
+  background-color: #888;
 }
 
 .flex-col-center {
@@ -708,4 +711,136 @@ footer {
     width: 100%;
     height: 220px;
   }
+}
+
+.popup {
+  z-index: 10;
+  background-color: #fff;
+  border: 5px solid #002462;
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem 3rem;
+  width: 90%;
+  max-width: 900px;
+
+  position: relative;
+}
+
+.overlay {
+  display: none;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 4rem 0;
+  min-height: 150vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-img {
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.progress {
+  background: #fff;
+  height: 3rem;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px inset rgba(0, 0, 0, 0.15);
+}
+
+.fill {
+  background: linear-gradient(
+    45deg,
+    rgba(2, 72, 194, 0.6) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(2, 72, 194, 0.6) 50%,
+    rgba(2, 72, 194, 0.6) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 50px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+
+  animation: move 2s linear infinite;
+}
+
+.a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes move {
+  100% {
+    background-position: 50px 0px;
+  }
+}
+
+.a {
+  background-color: #002462;
+  width: 60%;
+  height: 100%;
+}
+
+.form-el > input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+
+  box-shadow: 2px 2px 5px inset rgba(0, 0, 0, 0.05);
+
+  transition: border 0.3s ease-in-out;
+}
+
+.form-el > input:focus-visible {
+  border: 1px solid #002462;
+}
+
+.cta-popup-container {
+  padding: 0;
+}
+
+.cta-popup {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+
+/* .content */
+.content {
+  display: block;
+}
+
+.close-icon {
+  background-color: #111111;
+  color: #fff;
+  align-self: flex-start;
+  padding: 0.25rem;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #fefefe;
+
+  position: absolute;
+  right: -3%;
+  top: -3%;
+
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+  font-size: 2rem;
+  cursor: pointer;
 }
